@@ -96,36 +96,28 @@ Your task is to create a simple Payout Currency Converter using Deriv's WebSocke
 5. Formatting
    - Round the USD, AUD and GBP exchange rate values to `2` decimal places. Leave the remaining exchange rate values as it is.
 
-<!-- done -->
-<!--- You need to initiate a connection to deriv websocket, the `ws` endpoint is: `wss://ws.binaryws.com/websockets/v3?app_id=1089`.<br>-->
-<!--  Note: `1089` can be used as the `app_id`. Registering a new `app_id` is not needed.-->
+- You need to initiate a connection to deriv websocket, the `ws` endpoint is: `wss://ws.binaryws.com/websockets/v3?app_id=1089`.<br>
+ Note: `1089` can be used as the `app_id`. Registering a new `app_id` is not needed.
 
-<!-- done -->
-<!--- An example of how you can initiate a websocket connection to deriv websocket:-->
-<!--  Please keep in mind that the `onopen` and `onmessage` event listeners that listed below are just examples of how to send message and get response with deriv ws connection. You need to find the needed parameters from documentation links which provided in the next sections.-->
+- An example of how you can initiate a websocket connection to deriv websocket:
+ Please keep in mind that the `onopen` and `onmessage` event listeners that listed below are just examples of how to send message and get response with deriv ws connection. You need to find the needed parameters from documentation links which provided in the next sections.
 
-<!-- done -->
-<!--```javascript-->
-<!--var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');-->
+```javascript
+var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
 
-<!--ws.onopen = function(evt) {-->
-<!--    ws.send(JSON.stringify({ticks:'R_100'}));-->
-<!--};-->
+ws.onopen = function(evt) {
+   ws.send(JSON.stringify({ticks:'R_100'}));
+};
 
-<!--ws.onmessage = function(msg) {-->
-<!--   var data = JSON.parse(msg.data);-->
-<!--   console.log('ticks update: %o', data);-->
-<!--};-->
-<!--```-->
+ws.onmessage = function(msg) {
+  var data = JSON.parse(msg.data);
+  console.log('ticks update: %o', data);
+};
+```
 
+- List of payout currencies can be obtained using the `payout_currencies` WebSocket API call. Please check the API Playground for `payout_currencies` WebSocket API call - https://api.deriv.com/api-explorer/#payout_currencies
 
-
-<!-- done -->
-<!--- List of payout currencies can be obtained using the `payout_currencies` WebSocket API call. Please check the API Playground for `payout_currencies` WebSocket API call - https://api.deriv.com/api-explorer/#payout_currencies-->
-
-<!--- Current exchange rates can be obtained using the `exchange_rates` WebSocket API call. Please check the developer documentation for `exchange_rates` WebSocket API call - https://api.deriv.com/api-explorer/#exchange_rates-->
-
-
+- Current exchange rates can be obtained using the `exchange_rates` WebSocket API call. Please check the developer documentation for `exchange_rates` WebSocket API call - https://api.deriv.com/api-explorer/#exchange_rates
 
 # Note
 
