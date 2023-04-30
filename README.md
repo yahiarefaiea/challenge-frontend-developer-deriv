@@ -1,19 +1,2 @@
-# my-app
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# A Live Coding Challenge at Deriv as a Front-end Developer
+Please refer to the [`./README.old.md`](https://github.com/yahiarefaiea/challenge-software-engineer-supa/blob/main/README.old.md) file for more details about the challenge.
